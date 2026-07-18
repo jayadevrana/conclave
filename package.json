@@ -1,0 +1,17 @@
+{
+  "name": "conclave",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "A council of AI coding CLIs (Claude, Codex, Grok) that brainstorm, converge on a plan, build, and verify each other's work.",
+  "bin": {
+    "conclave": "src/index.mjs"
+  },
+  "scripts": {
+    "start": "node src/index.mjs",
+    "dry": "node src/index.mjs --dry-run"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT"
+}

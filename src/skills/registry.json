@@ -1,0 +1,48 @@
+{
+  "skills": [
+    {
+      "id": "pine",
+      "name": "Pine Script v6 (TradingView)",
+      "description": "Repaint-safe Pine v6 indicators & strategies",
+      "file": "pine.md",
+      "keywords": [
+        "pine",
+        "pinescript",
+        "pine script",
+        "tradingview"
+      ]
+    },
+    {
+      "id": "mql5-ea",
+      "name": "MQL5 Expert Advisor (MT5)",
+      "description": "Robust MT5 EAs: orders, risk, recovery",
+      "file": "mql5-ea.md",
+      "keywords": [
+        "mql5",
+        "mt5",
+        "metatrader",
+        "expert advisor",
+        "ea"
+      ]
+    },
+    {
+      "id": "fullstack",
+      "name": "Full-stack web app",
+      "description": "Node/TS API + modern frontend conventions",
+      "file": "fullstack.md",
+      "keywords": [
+        "fullstack",
+        "full-stack",
+        "full stack",
+        "api",
+        "backend",
+        "frontend",
+        "web app",
+        "webapp",
+        "express",
+        "react",
+        "database"
+      ]
+    }
+  ]
+}

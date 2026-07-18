@@ -1,0 +1,32 @@
+# macOS / exFAT AppleDouble sidecar files
+._*
+.DS_Store
+
+# Conclave runtime output & build artifacts
+.conclave/
+workspace/
+
+# Node
+node_modules/
+
+# Env
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Build output
+dist/
+build/
+.next/
+out/
+
+# Logs & local DBs
+*.log
+*.sqlite
+*.db

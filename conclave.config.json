@@ -1,0 +1,37 @@
+{
+  "//": "Conclave configuration. Each provider maps to an installed CLI adapter.",
+  "//model": "Leave model null to use each CLI's default (your logged-in subscription's model).",
+  "providers": {
+    "claude": { "adapter": "claude", "model": null },
+    "codex":  { "adapter": "codex",  "model": null },
+    "grok":   { "adapter": "grok",   "model": null },
+
+    "//cloud": "Free cloud models via OpenCode Zen — no install, no API keys.",
+    "bigpickle": { "adapter": "opencode", "model": "opencode/big-pickle",             "displayName": "Big Pickle (free cloud)" },
+    "nemotron":  { "adapter": "opencode", "model": "opencode/nemotron-3-ultra-free",  "displayName": "Nemotron 3 Ultra (free cloud)" },
+    "deepseek":  { "adapter": "opencode", "model": "opencode/deepseek-v4-flash-free", "displayName": "DeepSeek V4 Flash (free cloud)" },
+    "mimo":      { "adapter": "opencode", "model": "opencode/mimo-v2.5-free",         "displayName": "MiMo V2.5 (free cloud)" },
+    "northmini": { "adapter": "opencode", "model": "opencode/north-mini-code-free",   "displayName": "North Mini Code (free cloud)" }
+  },
+
+  "//roles": "Who plays what. council = brainstorm/critique panel. builders/verifiers = pools used by M2 divide-and-conquer (parallel). builder/verifier = the single-provider M1 fallback.",
+  "roles": {
+    "orchestrator": "claude",
+    "council": ["claude", "codex"],
+    "builder": "codex",
+    "builders": ["codex", "claude"],
+    "verifier": "claude",
+    "verifiers": ["claude", "codex"]
+  },
+
+  "loop": {
+    "debateRounds": 1,
+    "maxBuildAttempts": 2,
+    "//parallelBuild": "true = M2: split into sub-tasks, build in parallel git worktrees, cross-verify, merge. false = M1: single builder.",
+    "parallelBuild": true,
+    "maxTaskAttempts": 2
+  },
+
+  "timeoutMs": 900000,
+  "workspace": "./workspace"
+}
